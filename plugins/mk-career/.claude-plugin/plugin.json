@@ -1,0 +1,7 @@
+{
+  "name": "mk-career",
+  "description": "Поиск работы: резюме, ATS, сопроводительные письма, анкеты, интервью, переговоры о зарплате",
+  "author": {
+    "name": "Alexander Monakhov"
+  }
+}

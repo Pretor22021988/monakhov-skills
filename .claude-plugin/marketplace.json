@@ -1,0 +1,44 @@
+{
+  "name": "monakhov-skills",
+  "description": "Личная библиотека скиллов А. Ю. Монахова для всех аккаунтов Claude и Claude Code",
+  "owner": {
+    "name": "Alexander Monakhov"
+  },
+  "plugins": [
+    {
+      "name": "mk-legal",
+      "source": "./plugins/mk-legal",
+      "description": "Российское право: заключения, процессуальные документы, разбор актов и практики, договоры, критика позиции, ответы на площадках"
+    },
+    {
+      "name": "mk-research",
+      "source": "./plugins/mk-research",
+      "description": "Наука и аналитика: русские и мировые источники, обзоры литературы, рецензирование, научный текст, статистика, EDA, SHAP"
+    },
+    {
+      "name": "mk-career",
+      "source": "./plugins/mk-career",
+      "description": "Поиск работы: резюме, ATS, сопроводительные письма, анкеты, интервью, переговоры о зарплате"
+    },
+    {
+      "name": "mk-content",
+      "source": "./plugins/mk-content",
+      "description": "Контент и бренд: LinkedIn, лонгриды, очеловечивание текста, критика, диаграммы"
+    },
+    {
+      "name": "mk-security",
+      "source": "./plugins/mk-security",
+      "description": "ИБ и комплаенс: аудит MCP, промпт-инъекции, GDPR, NIST 800-30, реагирование на инциденты"
+    },
+    {
+      "name": "mk-engineering",
+      "source": "./plugins/mk-engineering",
+      "description": "Инженерия: GitOps, Terraform, SLO и надёжность, влияние вместо инструментов"
+    },
+    {
+      "name": "mk-connectors",
+      "source": "./plugins/mk-connectors",
+      "description": "Коннекторы рабочего контура: практика РФ и США, научные базы, медицина, веб-доступ, документация. Только адреса, без ключей: вход в каждый сервис делается в каждом аккаунте"
+    }
+  ]
+}

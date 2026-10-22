@@ -1,0 +1,7 @@
+{
+  "name": "mk-engineering",
+  "description": "Инженерия: GitOps, Terraform, SLO и надёжность, влияние вместо инструментов",
+  "author": {
+    "name": "Alexander Monakhov"
+  }
+}
