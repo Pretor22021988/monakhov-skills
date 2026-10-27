@@ -12,6 +12,7 @@
 | `mk-content` | 9 | content-humanizer, diagram-design, linkedin-content-planner, linkedin-hook-extractor, linkedin-hook-generator, linkedin-post-writer, linkedin-profile-optimizer, md-document, roast |
 | `mk-security` | 5 | auditing-mcp-servers-for-tool-poisoning, building-incident-response-playbook, conducting-cyber-risk-assessment-with-nist-800-30, conducting-gdpr-compliance-assessment, detecting-indirect-prompt-injection |
 | `mk-engineering` | 4 | gitops-deploy, impact-over-tools, slo-reliability, terraform-as-system |
+| `mk-design` | 18 | animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, design-taste-frontend, emil-design-eng, find-animation-opportunities, impeccable, improve-animations, mobile-native, pick-ui-library, prototype, review-animations, ui-ux-pro-max, write-swift |
 | `mk-local` | — | появляется после `import`: скиллы, которые жили только на диске в Claude Code |
 | `mk-connectors` | — | 11 коннекторов без ключей: amazingcat, courtlistener, consensus, elicit, scite, scholar-gateway, pubmed, clinical-trials, firecrawl, semantica, context7 |
 
@@ -40,6 +41,7 @@ tools/skills-library.sh              обслуживание библиотек
 | `bash skills-library.sh publish` | коммит и push в приватный репозиторий (при первом запуске создаёт его через `gh`) |
 | `bash skills-library.sh zips` | `dist/<плагин>.zip` для ручной загрузки, если GitHub недоступен |
 | `bash skills-library.sh park` | переносит из `~/.claude*/skills` в `skills-parked-ГГГГММДД` то, что уже приходит плагинами (ничего не удаляет; работает, только когда плагины уже стоят в Claude Code) |
+| `bash update-mk-design.sh` | перекачать в `mk-design` свежие версии Impeccable, Taste Skill, скиллов Эмиля Ковальски и UI UX Pro Max; затем `check` и `publish` |
 | `bash skills-library.sh cc` | ставит маркетплейс в Claude Code напрямую во все `~/.claude*` (запасной путь, если синхронизация с аккаунтом выключена) |
 
 ## Подключение аккаунта (один раз на каждый из четырёх)
