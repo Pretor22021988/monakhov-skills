@@ -47,6 +47,10 @@
     "cloudflare": {
       "type": "http",
       "url": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "composio": {
+      "type": "http",
+      "url": "https://connect.composio.dev/mcp"
     }
   }
 }

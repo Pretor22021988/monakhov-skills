@@ -14,7 +14,7 @@
 | `mk-engineering` | 4 | gitops-deploy, impact-over-tools, slo-reliability, terraform-as-system |
 | `mk-design` | 18 | animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, design-taste-frontend, emil-design-eng, find-animation-opportunities, impeccable, improve-animations, mobile-native, pick-ui-library, prototype, review-animations, ui-ux-pro-max, write-swift |
 | `mk-local` | — | появляется после `import`: скиллы, которые жили только на диске в Claude Code |
-| `mk-connectors` | — | 11 коннекторов без ключей: amazingcat, courtlistener, consensus, elicit, scite, scholar-gateway, pubmed, clinical-trials, firecrawl, semantica, context7 |
+| `mk-connectors` | — | 13 коннекторов без ключей: amazingcat, courtlistener, consensus, elicit, scite, scholar-gateway, pubmed, clinical-trials, firecrawl, semantica, context7, cloudflare, composio |
 
 Встроенные скиллы Anthropic (docx, pdf, pptx, xlsx, skill-creator и др.) в библиотеку не входят: они и так есть в каждом аккаунте.
 

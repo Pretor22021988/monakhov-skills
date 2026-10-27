@@ -15,6 +15,8 @@
 | `firecrawl` | https://mcp.firecrawl.dev/v2/mcp-search |
 | `semantica` | https://mcp.ai-semantica.com/mcp |
 | `context7` | https://mcp.context7.com/mcp |
+| `cloudflare` | https://bindings.mcp.cloudflare.com/mcp |
+| `composio` | https://connect.composio.dev/mcp — 500+ приложений через Composio; доступ к каждому приложению выдаётся внутри Composio отдельно |
 
 ## В каждом аккаунте
 
