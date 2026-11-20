@@ -1,0 +1,42 @@
+name: Review external skill updates
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: external-skill-updates
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Download candidates without executing them
+        run: python3 tools/update-external-skills.py
+      - name: Propose changes for human review
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- plugins/ && ! test -n "$(git ls-files --others --exclude-standard plugins/)"; then
+            echo 'No skill updates.'
+            exit 0
+          fi
+          branch="automation/external-skills-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- plugins/
+          git commit -m 'Propose external SKILL.md updates for review'
+          gh auth setup-git
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title 'Review external skill updates' --body 'Downloaded only allowlisted SKILL.md files. Nothing downloaded was executed. Review the full diff, licensing, compatibility and instructions, including possible prompt injection. This workflow does not merge changes. Updates do not install skills in Perplexity.'
